@@ -129,8 +129,8 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <duration>2</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <stem color="#FF0000">down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <stem >down</stem>
+        
         <lyric number="1" default-x="6.58" default-y="-80.00">
           <syllabic>single</syllabic>
           <text>Auf</text>
@@ -146,7 +146,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>quarter</type>
         <stem>down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <lyric number="1" default-x="6.58" default-y="-80.00">
           <syllabic>single</syllabic>
           <text>dem</text>
@@ -165,7 +165,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <type>quarter</type>
         <dot/>
         <stem>down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <lyric number="1" default-x="6.58" default-y="-80.00">
           <syllabic>begin</syllabic>
           <text>Hü</text>
@@ -180,7 +180,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <lyric number="1" default-x="6.58" default-y="-80.00">
           <syllabic>end</syllabic>
           <text>gel</text>
@@ -195,7 +195,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <beam number="1">begin</beam>
         <lyric number="1" default-x="8.81" default-y="-80.00">
           <syllabic>single</syllabic>
@@ -212,7 +212,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <beam number="1">end</beam>
         <lyric number="1" default-x="6.58" default-y="-80.00">
           <syllabic>single</syllabic>
@@ -231,7 +231,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>quarter</type>
         <stem>down</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <lyric number="1" default-x="6.58" default-y="-80.00">
           <syllabic>begin</syllabic>
           <text>spä</text>
@@ -338,8 +338,8 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <duration>2</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <stem color="#EE0000">up</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <stem>up</stem>
+        <notehead >normal</notehead>
         <staff>1</staff>
         </note>
       <note default-x="107.39" default-y="-181.00">
@@ -365,7 +365,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <staff>1</staff>
         </note>
       <note default-x="107.39" default-y="-161.00">
@@ -429,7 +429,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <duration>2</duration>
         <voice>5</voice>
         <type>quarter</type>
-        <stem color="#EEBB00">up</stem>
+        <stem>up</stem>
         <staff>2</staff>
         </note>
       <note default-x="107.39" default-y="-261.00">
@@ -443,7 +443,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>5</voice>
         <type>quarter</type>
         <stem>up</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <staff>2</staff>
         </note>
       <attributes>
@@ -508,7 +508,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <staff>1</staff>
         </note>
       <note default-x="115.95" default-y="-181.00">
@@ -522,7 +522,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <staff>1</staff>
         </note>
       <note default-x="115.95" default-y="-171.00">
@@ -535,7 +535,7 @@ export const TEST_XML = `<?xml version="1.0" encoding="UTF-8"?>
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
-        <notehead color="#FF0000">normal</notehead>
+        <notehead >normal</notehead>
         <staff>1</staff>
         </note>
       <note>
