@@ -56,7 +56,7 @@
           </staff-tuning>
           <staff-tuning line="2">
             <tuning-step color="#FF0000">A</tuning-step>
-            <tuning-octave>2</tuning-octave>
+            <tuning-octave color="#00FF00">2</tuning-octave>
           </staff-tuning>
           <staff-tuning line="3">
             <tuning-step>D</tuning-step>
