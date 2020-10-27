@@ -42,8 +42,26 @@ function App() {
             const xmlDoc = parser.parseFromString(xml, "text/xml")
             const processedXML = processXML(xmlDoc)
 
-            osmd.load(processedXML)
-                .then(() => { osmd.render() })
+            osmd.load(xmlDoc)
+                .then(() => { 
+                    osmd.render()
+                    const svg = osmd.container.querySelector("svg");
+
+                    const notes = svg.querySelectorAll(".vf-tabnote, .vf-notehead");
+                    
+                    let cls;
+                    notes.forEach(note => {
+                        cls = note.classList.value;
+
+                        if(cls === "vf-notehead"){
+                            note.querySelector("path").setAttribute("fill", "red")
+                        } else if (cls === "vf-tabnote"){
+
+                        }
+                    })
+                    
+
+                })
         }
 
     }, [xml])
