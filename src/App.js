@@ -20,9 +20,13 @@ const VEEVR_TEST = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src
 function App() {
 
     const [xml, setXML] = useState(null)
+    const [svg, setSvg] = useState(null)
 
     // EVENTS
     const fetchData = url => e => {
+
+        svg && svg.remove()
+        setSvg(null)
 
         fetch(url)
             .then(response => response.text())
@@ -40,27 +44,40 @@ function App() {
 
             const parser = new DOMParser()
             const xmlDoc = parser.parseFromString(xml, "text/xml")
-            const processedXML = processXML(xmlDoc)
+            // const processedXML = processXML(xmlDoc)
 
             osmd.load(xmlDoc)
-                .then(() => { 
-                    osmd.render()
-                    const svg = osmd.container.querySelector("svg");
+                .then(async () => {
 
-                    const notes = svg.querySelectorAll(".vf-tabnote, .vf-notehead");
-                    
-                    let cls;
-                    notes.forEach(note => {
-                        cls = note.classList.value;
+                    let svgElement;
 
-                        if(cls === "vf-notehead"){
-                            note.querySelector("path").setAttribute("fill", "red")
-                        } else if (cls === "vf-tabnote"){
+                    const checkSVG = setInterval(() => {
+                        svgElement = document.querySelector("svg")
+                        if (svgElement) {
+                            clearInterval(checkSVG)
+                            setSvg(svgElement)
+                            const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
+
+                            let cls, choice;
+                            notes.forEach(note => {
+                                cls = note.classList.value;
+
+                                choice = Math.random()
+
+                                if (choice >= 0.7) {
+                                    if (cls === "vf-notehead") {
+                                        note.querySelector("path").setAttribute("fill", "red")
+                                    } else if (cls === "vf-tabnote") {
+                                        for (let rect of note.querySelectorAll("rect")) {
+                                            rect.setAttribute("fill", "red")
+                                        }
+                                    }
+                                }
+                            })
+
 
                         }
-                    })
-                    
-
+                    }, 50)
                 })
         }
 
