@@ -25,7 +25,7 @@ function App() {
     // EVENTS
     const fetchData = url => e => {
 
-        svg && svg.remove()
+        svg && svg.forEach(el => el.remove())
         setSvg(null)
 
         fetch(url)
@@ -49,33 +49,34 @@ function App() {
             osmd.load(xmlDoc)
                 .then(async () => {
 
-                    let svgElement;
+                    let svgElements;
 
                     const checkSVG = setInterval(() => {
-                        svgElement = document.querySelector("svg")
-                        if (svgElement) {
+                        svgElements = [...document.querySelectorAll("svg")]
+                        if (svgElements) {
                             clearInterval(checkSVG)
-                            setSvg(svgElement)
-                            const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
+                            setSvg(svgElements)
 
-                            let cls, choice;
-                            notes.forEach(note => {
-                                cls = note.classList.value;
+                            svgElements.forEach(svgElement => {
+                                const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
 
-                                choice = Math.random()
+                                let cls, choice;
+                                notes.forEach(note => {
+                                    cls = note.classList.value;
 
-                                if (choice >= 0.7) {
-                                    if (cls === "vf-notehead") {
-                                        note.querySelector("path").setAttribute("fill", "red")
-                                    } else if (cls === "vf-tabnote") {
-                                        for (let rect of note.querySelectorAll("rect")) {
-                                            rect.setAttribute("fill", "red")
+                                    choice = Math.random()
+
+                                    if (choice >= 0.7) {
+                                        if (cls === "vf-notehead") {
+                                            note.querySelector("path").setAttribute("fill", "red")
+                                        } else if (cls === "vf-tabnote") {
+                                            for (let rect of note.querySelectorAll("rect")) {
+                                                rect.setAttribute("fill", "red")
+                                            }
                                         }
                                     }
-                                }
+                                })
                             })
-
-
                         }
                     }, 50)
                 })
