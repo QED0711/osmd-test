@@ -15,6 +15,9 @@ const BACH = "https://raw.githubusercontent.com/opensheetmusicdisplay/opensheetm
 
 const VEEVR_TEST = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/12%20Bar%20Blues%20in%20A%20(Alternate%20RhythmLead).xml"
 
+const C_MAJOR = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/C_major.xml"
+const A_MIN9 = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/A_min9.xml"
+
 
 
 function App() {
@@ -90,7 +93,9 @@ function App() {
             <button className="selection-button" onClick={fetchData(BEETHOVEN)}>Test 1</button>
             <button className="selection-button" onClick={fetchData(DEBUSSY)}>Test 2</button>
             <button className="selection-button" onClick={fetchData(BACH)}>Test 3</button>
-            <button className="selection-button" onClick={fetchData(VEEVR_TEST)}>Test 4</button>
+            <button className="selection-button" onClick={fetchData(C_MAJOR)}>C_MAJOR</button>
+            <button className="selection-button" onClick={fetchData(A_MIN9)}>A_MIN9</button>
+            {/* <button className="selection-button" onClick={fetchData(VEEVR_TEST)}>Test 4</button> */}
             <div className="container" style={{
                 width: "95vw",
                 margin: "0 auto"
