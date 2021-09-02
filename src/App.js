@@ -15,7 +15,7 @@ const BACH = "https://raw.githubusercontent.com/opensheetmusicdisplay/opensheetm
 
 const VEEVR_TEST = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/12%20Bar%20Blues%20in%20A%20(Alternate%20RhythmLead).xml"
 
-const C_MAJOR = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/C_major.xml"
+const C_MAJOR = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/c_maj_noteflight.xml"
 const A_MIN9 = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/A_min9.xml"
 
 
