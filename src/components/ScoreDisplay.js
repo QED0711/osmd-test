@@ -1,63 +1,41 @@
 import React, { useEffect, useState } from 'react';
 
-
-import cMaj from './results/C_major.json'
-import aMin from './results/A_min9.json'
-
-
-import './App.css';
-
-import { TEST_XML } from "./test";
-import { processXML } from './processXML';
-import ControlPanel from './components/ControlPanel';
-import ScoreDisplay from './components/ScoreDisplay';
-
 const opensheetmusicdisplay = require("opensheetmusicdisplay")
 
+const ScoreDisplay = ({
+    selectedScore
+}) => {
 
-// CONFIG
-const BEETHOVEN = "https://raw.githubusercontent.com/opensheetmusicdisplay/opensheetmusicdisplay/develop/test/data/Beethoven_AnDieFerneGeliebte.xml"
-const DEBUSSY = "https://raw.githubusercontent.com/opensheetmusicdisplay/opensheetmusicdisplay/develop/test/data/Debussy_Mandoline.xml"
-const BACH = "https://raw.githubusercontent.com/opensheetmusicdisplay/opensheetmusicdisplay/develop/test/data/JohannSebastianBach_Air.xml"
-
-const VEEVR_TEST = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/12%20Bar%20Blues%20in%20A%20(Alternate%20RhythmLead).xml"
-
-const C_MAJOR = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/c_maj_noteflight.xml"
-const A_MIN9 = "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/a_minor9_noteflight.xml"
-
-
-
-function App() {
-
-    const [xml, setXML] = useState(null)
+    const [xml, setXml] = useState(null)
     const [svg, setSvg] = useState(null)
-    const [selectedScore, setSelectedScore] = useState(null)
-
-    // EVENTS
-    const fetchData = (url, score) => e => {
 
 
+    // ON LOAD
+    useEffect(() => {
 
-        svg && svg.forEach(el => el.remove())
-        setSvg(null)
 
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                setXML(data)
-            })
+        if (selectedScore) {
+            fetch(selectedScore.url)
+                .then(response => response.text())
+                .then(data => {
+                    setXml(data)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }
 
-    }
 
+
+    }, [selectedScore])
 
     useEffect(() => {
 
-        if (xml) {
+        if (xml && selectedScore) {
             const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("sheetmusic")
 
             const parser = new DOMParser()
             const xmlDoc = parser.parseFromString(xml, "text/xml")
-            // const processedXML = processXML(xmlDoc)
 
             osmd.load(xmlDoc)
                 .then(async () => {
@@ -72,14 +50,21 @@ function App() {
 
                             svgElements.forEach(svgElement => {
                                 const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
-                                const results = aMin
+                                const results = selectedScore.results
+                                const overallGrade = selectedScore.results.filter(r => r.assessment.pitch && r.assessment.rhythm).length / results.length
+                                const pitchGrade = selectedScore.results.filter(r => r.assessment.pitch).length / results.length
+                                const rhythmGrade = selectedScore.results.filter(r => r.assessment.rhythm).length / results.length
 
-
+                                console.table({
+                                    overallGrade,
+                                    pitchGrade,
+                                    rhythmGrade
+                                })
 
                                 let cls, passed, choice;
                                 notes.forEach((note, i) => {
                                     cls = note.classList.value;
-                                    passed = results[i].assessment.rhythm /* && results[i].assessment.rhythm */
+                                    passed = results[i].assessment.pitch /* && results[i].assessment.rhythm */
 
 
                                     // choice = Math.random()
@@ -100,17 +85,18 @@ function App() {
                 })
         }
 
-    }, [xml])
+    }, [xml, selectedScore])
 
     return (
-        <div className="App">
 
-            <ControlPanel {...{ selectedScore, setSelectedScore }} />
-            <ScoreDisplay {...{ selectedScore }} />
-
+        <div className="container" style={{
+            width: "95vw",
+            margin: "0 auto"
+        }}>
+            <div id="sheetmusic" style={{ height: "auto", width: "95%", margin: "0 auto" }}></div>
 
         </div>
-    );
+    )
 }
 
-export default App;
+export default ScoreDisplay;
