@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { fillNoteColor } from '../js/displayHelpers';
 
 const opensheetmusicdisplay = require("opensheetmusicdisplay")
 
 const ScoreDisplay = ({
-    selectedScore
+    selectedScore,
+    gradedFeature,
+    displayResults,
+    setAssessmentPercentages
 }) => {
 
     const [xml, setXml] = useState(null)
@@ -47,45 +51,58 @@ const ScoreDisplay = ({
                         if (svgElements) {
                             clearInterval(checkSVG)
                             setSvg(svgElements)
-
-                            svgElements.forEach(svgElement => {
-                                const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
-                                const results = selectedScore.results
-                                const overallGrade = selectedScore.results.filter(r => r.assessment.pitch && r.assessment.rhythm).length / results.length
-                                const pitchGrade = selectedScore.results.filter(r => r.assessment.pitch).length / results.length
-                                const rhythmGrade = selectedScore.results.filter(r => r.assessment.rhythm).length / results.length
-
-                                console.table({
-                                    overallGrade,
-                                    pitchGrade,
-                                    rhythmGrade
-                                })
-
-                                let cls, passed, choice;
-                                notes.forEach((note, i) => {
-                                    cls = note.classList.value;
-                                    passed = results[i].assessment.pitch /* && results[i].assessment.rhythm */
-
-
-                                    // choice = Math.random()
-
-                                    if (!passed) {
-                                        if (cls === "vf-notehead") {
-                                            note.querySelector("path").setAttribute("fill", "red")
-                                        } else if (cls === "vf-tabnote") {
-                                            for (let rect of note.querySelectorAll("rect")) {
-                                                rect.setAttribute("fill", "red")
-                                            }
-                                        }
-                                    }
-                                })
-                            })
                         }
                     }, 50)
                 })
         }
 
     }, [xml, selectedScore])
+
+    useEffect(() => {
+
+        if(svg && displayResults){
+            svg.forEach(svgElement => {
+                const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
+                const results = selectedScore.results
+                const indexTransform = selectedScore.indexTransform
+
+                
+                console.log(results.length)
+                
+                const overall = selectedScore.results.filter(r => r.assessment.pitch && r.assessment.rhythm).length / results.length
+                const pitch = selectedScore.results.filter(r => r.assessment.pitch).length / results.length
+                const rhythm = selectedScore.results.filter(r => r.assessment.rhythm).length / results.length
+
+                setAssessmentPercentages({overall, pitch, rhythm})
+                
+                window.__matchedNotes = []
+                let note, cls, passed, choice;
+                results.forEach((r, i) => {
+
+                    note = indexTransform ? notes[indexTransform[i]] : notes[i]
+
+                    switch(gradedFeature){
+                        case "overview":
+                            passed = results[i]?.assessment?.pitch && results[i].assessment.rhythm
+                            break;
+                        case "pitch":
+                            passed = results[i]?.assessment?.pitch
+                            break;
+                        case "rhythm":
+                            passed = results[i]?.assessment?.rhythm
+                            break;
+                    }
+
+                    if (!passed) {
+                        fillNoteColor(note, "red")
+                    } else {
+                        fillNoteColor(note, "black")
+                    }
+                })
+            })
+        }
+
+    }, [gradedFeature, svg, displayResults])
 
     return (
 

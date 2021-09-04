@@ -32,81 +32,17 @@ function App() {
     const [xml, setXML] = useState(null)
     const [svg, setSvg] = useState(null)
     const [selectedScore, setSelectedScore] = useState(null)
-
-    // EVENTS
-    const fetchData = (url, score) => e => {
-
-
-
-        svg && svg.forEach(el => el.remove())
-        setSvg(null)
-
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                setXML(data)
-            })
-
-    }
+    const [displayResults, setDisplayResults] = useState(false)
+    const [gradedFeature, setGradedFeature] = useState("overview")
+    const [assessmentPercentages, setAssessmentPercentages] = useState(null)
 
 
-    useEffect(() => {
-
-        if (xml) {
-            const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("sheetmusic")
-
-            const parser = new DOMParser()
-            const xmlDoc = parser.parseFromString(xml, "text/xml")
-            // const processedXML = processXML(xmlDoc)
-
-            osmd.load(xmlDoc)
-                .then(async () => {
-
-                    let svgElements;
-
-                    const checkSVG = setInterval(() => {
-                        svgElements = [...document.querySelectorAll("svg")]
-                        if (svgElements) {
-                            clearInterval(checkSVG)
-                            setSvg(svgElements)
-
-                            svgElements.forEach(svgElement => {
-                                const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
-                                const results = aMin
-
-
-
-                                let cls, passed, choice;
-                                notes.forEach((note, i) => {
-                                    cls = note.classList.value;
-                                    passed = results[i].assessment.rhythm /* && results[i].assessment.rhythm */
-
-
-                                    // choice = Math.random()
-
-                                    if (!passed) {
-                                        if (cls === "vf-notehead") {
-                                            note.querySelector("path").setAttribute("fill", "red")
-                                        } else if (cls === "vf-tabnote") {
-                                            for (let rect of note.querySelectorAll("rect")) {
-                                                rect.setAttribute("fill", "red")
-                                            }
-                                        }
-                                    }
-                                })
-                            })
-                        }
-                    }, 50)
-                })
-        }
-
-    }, [xml])
 
     return (
         <div className="App">
 
-            <ControlPanel {...{ selectedScore, setSelectedScore }} />
-            <ScoreDisplay {...{ selectedScore }} />
+            <ControlPanel {...{ selectedScore, setSelectedScore, gradedFeature, setGradedFeature, displayResults, setDisplayResults, assessmentPercentages, setAssessmentPercentages }} />
+            <ScoreDisplay {...{ selectedScore, gradedFeature, displayResults, setAssessmentPercentages }} />
 
 
         </div>
