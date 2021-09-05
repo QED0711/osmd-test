@@ -11,6 +11,7 @@ import { TEST_XML } from "./test";
 import { processXML } from './processXML';
 import ControlPanel from './components/ControlPanel';
 import ScoreDisplay from './components/ScoreDisplay';
+import AssessmentPanel from './components/AssessmentPanel';
 
 const opensheetmusicdisplay = require("opensheetmusicdisplay")
 
@@ -41,8 +42,22 @@ function App() {
     return (
         <div className="App">
 
-            <ControlPanel {...{ selectedScore, setSelectedScore, gradedFeature, setGradedFeature, displayResults, setDisplayResults, assessmentPercentages, setAssessmentPercentages }} />
-            <ScoreDisplay {...{ selectedScore, gradedFeature, displayResults, setAssessmentPercentages }} />
+            <ControlPanel {...{
+                selectedScore,
+                setSelectedScore,
+                gradedFeature,
+                setGradedFeature,
+                displayResults,
+                setDisplayResults,
+                assessmentPercentages,
+                setAssessmentPercentages
+            }} />
+            <ScoreDisplay {...{
+                selectedScore,
+                gradedFeature,
+                displayResults,
+                setAssessmentPercentages
+            }} />
 
 
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import aMinResults from '../results/A_min9.json'
 import cMajResults from '../results/C_major.json'
@@ -31,6 +31,8 @@ const ControlPanel = ({
     setAssessmentPercentages
 }) => {
 
+    // STATE
+    const [assessing, setAssessing] = useState(false)
 
     // EVENTS
     const handleSongSelection = e => {
@@ -39,7 +41,10 @@ const ControlPanel = ({
         setDisplayResults(false)
     }
 
-    const handleAssessPerformanceClick = () => {
+    const handleAssessPerformanceClick = async () => {
+        setAssessing(true)
+        await new Promise(resolve => setTimeout(resolve, 5000))
+        setAssessing(false)
         setDisplayResults(true)
     }
 
@@ -47,42 +52,59 @@ const ControlPanel = ({
         setGradedFeature(feature)
     }
 
+
+
     return (
         <div>
 
-            <select onChange={handleSongSelection}>
+            <select id="example-select" onChange={handleSongSelection}>
                 <option value={null}>Select a Song</option>
-                <option value="aMin">A Minor 9</option>
+                {/* <option value="aMin">A Minor 9</option> */}
                 <option value="cMaj">C Major Pentatonic</option>
             </select>
 
             {
                 selectedScore
                 &&
-                <>
-                    <div>
-                        <audio controls>
-                            <source src={selectedScore.audio} type="audio/wav" />
-                        </audio>
-                        <button onClick={handleAssessPerformanceClick} disabled={displayResults}>Assess Performance</button>
-                    </div>
-                    {
-                        displayResults
-                        &&
-                        <div>
-                            <button className={`graded-feature-button ${gradedFeature === "overview" ? "selected" : ""}`} onClick={handleGradedFeatureSelection("overview")}>
-                                Overview {(assessmentPercentages?.overall * 100).toFixed(2)}%
-                            </button>
-                            <button className={`graded-feature-button ${gradedFeature === "pitch" ? "selected" : ""}`} onClick={handleGradedFeatureSelection("pitch")}>
-                                Pitch {(assessmentPercentages?.pitch * 100).toFixed(2)}%
-                            </button>
-                            <button className={`graded-feature-button ${gradedFeature === "rhythm" ? "selected" : ""}`} onClick={handleGradedFeatureSelection("rhythm")}>
-                                Rhythm {(assessmentPercentages?.rhythm * 100).toFixed(2)}%
-                            </button>
-                        </div>
-                    }
-                </>
+                <div className="sample-audio">
+                    <h3>Sample Audio</h3>
+                    <audio controls>
+                        <source src={selectedScore.audio} type="audio/wav" />
+                    </audio>
+                </div>
+
             }
+
+            <div id="assessment-panel">
+                {
+                    assessing
+                    &&
+                    "WORKING..."
+                }
+                {
+                    (selectedScore && !displayResults && !assessing)
+                    &&
+                    <button id="assessment-button" class="selected" onClick={handleAssessPerformanceClick} disabled={displayResults}>Assess Performance</button>
+                }
+
+                {
+                    (selectedScore && displayResults)
+                    &&
+                    <>
+
+                        <button className={`graded-feature-button ${gradedFeature === "overview" ? "selected" : ""}`} onClick={handleGradedFeatureSelection("overview")}>
+                            Overview {(assessmentPercentages?.overall * 100).toFixed(2)}%
+                        </button>
+                        <button className={`graded-feature-button ${gradedFeature === "pitch" ? "selected" : ""}`} onClick={handleGradedFeatureSelection("pitch")}>
+                            Pitch {(assessmentPercentages?.pitch * 100).toFixed(2)}%
+                        </button>
+                        <button className={`graded-feature-button ${gradedFeature === "rhythm" ? "selected" : ""}`} onClick={handleGradedFeatureSelection("rhythm")}>
+                            Rhythm {(assessmentPercentages?.rhythm * 100).toFixed(2)}%
+                        </button>
+                    </>
+                }
+
+            </div>
 
 
 

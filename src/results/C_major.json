@@ -45,7 +45,7 @@
         "note": "D4",
         "assessment": {
             "pitch": true,
-            "rhythm": false
+            "rhythm": true
         }
     },
     {
@@ -94,14 +94,14 @@
         "note": "D3",
         "assessment": {
             "pitch": true,
-            "rhythm": false
+            "rhythm": true
         }
     },
     {
         "note": "E3",
         "assessment": {
             "pitch": true,
-            "rhythm": false
+            "rhythm": true
         }
     },
     {
@@ -129,7 +129,7 @@
         "note": "C3",
         "assessment": {
             "pitch": true,
-            "rhythm": false
+            "rhythm": true
         }
     },
     {
