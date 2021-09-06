@@ -41,7 +41,7 @@ function App() {
 
     return (
         <div className="App">
-
+            <h1>Algorivm Demo</h1>
             <ControlPanel {...{
                 selectedScore,
                 setSelectedScore,

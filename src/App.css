@@ -1,10 +1,20 @@
-
-body{
-  padding: 2rem 0;
-
-  text-align: center;
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+  height: calc(100vh - 1rem);
+  padding: 0 0 0;
+
+  text-align: center;
+  background: linear-gradient(135deg, #141414, #00afe4);
+  color: whitesmoke;
+  
+}
+
+.App{
+  margin: 1rem 0 0;
+}
 
 .selection-button{
   margin: 0 1rem 1rem;
@@ -42,6 +52,8 @@ body{
 
   margin: 0 auto;
 
+  background-color: whitesmoke;
+
   box-shadow: 2px 2px 10px grey;
 }
 
@@ -50,7 +62,11 @@ body{
 #example-select{
   font-size: 1.5rem;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
+
+  border-radius: 8px;
+
+  background-color: whitesmoke;
 
   cursor: pointer;
 }
@@ -61,11 +77,11 @@ body{
 
 
 .sample-audio{
-  width: fit-content;
+  width: 95vw;
   margin: 1rem auto 0;
   padding: 1rem;
 
-  box-shadow: 1px 3px 3px grey;
+  /* box-shadow: 1px 3px 3px grey; */
 }
 
 .sample-audio h3{
@@ -73,9 +89,9 @@ body{
 }
 
 .sample-audio audio{
-  width: calc(100vw - 8rem);
+  width: 100%;
   /* filter: sepia(0%) saturate(10%) contrast(5%) invert(0%); */
-  
+  background-color: whitesmoke;
   border-radius: 0;
 }
 
@@ -95,6 +111,11 @@ audio::-webkit-media-controls-panel{
   align-items: center;
 }
 
+#assessment-panel button:hover{
+  box-shadow: 5px 5px 20px grey;
+  text-shadow: 2px 2px 10px grey;
+}
+
 #assessment-panel button{
   width: 27vw;
   margin: 0 0.5rem;
@@ -108,41 +129,48 @@ audio::-webkit-media-controls-panel{
   border-radius: 20px;
 
   cursor: pointer;
+
+  animation-name: zoom-in;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  
 }
 
-#assessment-panel button:hover{
-  animation-name: hover-button;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
+@keyframes zoom-in{
+  from{
+    transform: scale(0.01);
+  }
+  to{
+    transform: scale(1);
+  }
 }
+
 
 #assessment-panel button.selected{
   opacity: 1;
 }
 
-/* #assessment-button{
-  padding: 1rem;
-  margin: 0 0 1rem;
-  
-  font-size: 2rem;
+#assessment-stage{
+  margin: 0;
+  font-weight: 300;
 
-  background-color: whitesmoke;
-
-  border: none;
-  border-radius: 15px;
-
-  cursor: pointer;
+  animation-name: pulsing-text;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
 
 }
 
-#assessment-button:disabled{
-  cursor: not-allowed;
+@keyframes pulsing-text{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1;
+  }
 }
-
-#assessment-button:enabled:hover{
-  animation-name: hover-button;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-
-} */
 

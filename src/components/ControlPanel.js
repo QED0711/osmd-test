@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import aMinResults from '../results/A_min9.json'
 import cMajResults from '../results/C_major.json'
@@ -13,12 +13,19 @@ const SCORES = {
         audio: aMinAudio
     },
     "cMaj": {
-        url: "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/c_maj_noteflight.xml",
+        url: "https://raw.githubusercontent.com/QED0711/osmd-test/feature/demo_results/src/scores/c_maj_noteflight.xml",
         results: cMajResults,
         indexTransform: [0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 25, 27, 28, 29, 31, 32, 34, 35, 36, 38, 40, 41, 43, 45, 46, 47, 48],
         audio: cMajAudio
     }
 }
+
+const MOCK_STAGES = [
+    "Uploading", "Uploading", "Uploading", "Uploading",
+    "Formatting Submission", "Formatting Submission",
+    "Transcribing to MIDI", "Transcribing to MIDI", "Transcribing to MIDI", "Transcribing to MIDI", "Transcribing to MIDI", "Transcribing to MIDI", "Transcribing to MIDI",
+    "Formatting Results", "Formatting Results",
+]
 
 const ControlPanel = ({
     selectedScore,
@@ -33,6 +40,7 @@ const ControlPanel = ({
 
     // STATE
     const [assessing, setAssessing] = useState(false)
+    const [assessmentStage, setAssessmentStage] = useState(0)
 
     // EVENTS
     const handleSongSelection = e => {
@@ -43,7 +51,7 @@ const ControlPanel = ({
 
     const handleAssessPerformanceClick = async () => {
         setAssessing(true)
-        await new Promise(resolve => setTimeout(resolve, 5000))
+        await new Promise(resolve => setTimeout(resolve, 15000))
         setAssessing(false)
         setDisplayResults(true)
     }
@@ -51,6 +59,20 @@ const ControlPanel = ({
     const handleGradedFeatureSelection = feature => () => {
         setGradedFeature(feature)
     }
+
+    // ONLOAD
+    useEffect(() => {
+        if(assessing){
+            const assessmentStageInterval = setInterval(() => {
+                if(assessmentStage >= 15) {
+                    clearInterval(assessmentStageInterval);
+                    return;
+                }
+                setAssessmentStage(stage => stage + 1)
+            }, 1000)
+        }
+
+    }, [assessing])
 
 
 
@@ -67,7 +89,7 @@ const ControlPanel = ({
                 selectedScore
                 &&
                 <div className="sample-audio">
-                    <h3>Sample Audio</h3>
+                    <h2>Sample Audio</h2>
                     <audio controls>
                         <source src={selectedScore.audio} type="audio/wav" />
                     </audio>
@@ -79,7 +101,7 @@ const ControlPanel = ({
                 {
                     assessing
                     &&
-                    "WORKING..."
+                    <h2 id="assessment-stage">{MOCK_STAGES[assessmentStage]}...</h2>
                 }
                 {
                     (selectedScore && !displayResults && !assessing)
