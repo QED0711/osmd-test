@@ -5,14 +5,15 @@ import cMajResults from '../results/C_major.json'
 
 import aMinAudio from '../audio/A_min9.wav'
 import cMajAudio from '../audio/C_major.wav'
+import { useParams } from 'react-router';
 
 const SCORES = {
-    "aMin": {
+    "a_min": {
         url: "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/a_minor9_noteflight.xml",
         results: aMinResults,
         audio: aMinAudio
     },
-    "cMaj": {
+    "c_maj": {
         url: "https://raw.githubusercontent.com/QED0711/osmd-test/feature/demo_results/src/scores/c_maj_noteflight.xml",
         results: cMajResults,
         indexTransform: [0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 25, 27, 28, 29, 31, 32, 34, 35, 36, 38, 40, 41, 43, 45, 46, 47, 48],
@@ -41,6 +42,8 @@ const ControlPanel = ({
     // STATE
     const [assessing, setAssessing] = useState(false)
     const [assessmentStage, setAssessmentStage] = useState(0)
+    const {songTitle} = useParams()
+    console.log({songTitle})
 
     // EVENTS
     const handleSongSelection = e => {
@@ -74,22 +77,31 @@ const ControlPanel = ({
 
     }, [assessing])
 
+    useEffect(() => {
+        
+        if(!!songTitle && songTitle in SCORES){
+            setSelectedScore(SCORES[songTitle])
+            setGradedFeature("overview")
+            setDisplayResults(true)
+        }
+    }, [songTitle])
+
 
 
     return (
         <div>
 
-            <select id="example-select" onChange={handleSongSelection}>
+            {/* <select id="example-select" onChange={handleSongSelection}>
                 <option value={null}>Select a Song</option>
-                {/* <option value="aMin">A Minor 9</option> */}
+                <option value="aMin">A Minor 9</option>
                 <option value="cMaj">C Major Pentatonic</option>
-            </select>
+            </select> */}
 
             {
                 selectedScore
                 &&
                 <div className="sample-audio">
-                    <h2>Sample Audio</h2>
+                    {/* <h2>Sample Audio</h2> */}
                     <audio controls>
                         <source src={selectedScore.audio} type="audio/wav" />
                     </audio>
