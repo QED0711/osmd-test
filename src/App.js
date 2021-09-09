@@ -32,12 +32,12 @@ function App() {
     const [gradedFeature, setGradedFeature] = useState("overview")
     const [assessmentPercentages, setAssessmentPercentages] = useState(null)
 
-
+    console.log({publicURL: process.env.PUBLIC_URL})
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
-                <Route exact path="/songs/:songTitle">
+                <Route exact path="/songs/:songTitle/">
                 <div className="App">
                     <ControlPanel {...{
                         selectedScore,
