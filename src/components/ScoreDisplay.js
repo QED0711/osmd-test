@@ -66,6 +66,13 @@ const ScoreDisplay = ({
                 const results = selectedScore.results
                 const indexTransform = selectedScore.indexTransform
 
+                window.__matchedNotes = []
+                notes.forEach((note, i) => {
+                    note.addEventListener("click", () => {
+                        window.__matchedNotes = Array.from(new Set([...window.__matchedNotes, i]))
+                        console.log(window.__matchedNotes)
+                    })
+                })
                 
                 console.log(results.length)
                 
@@ -80,6 +87,7 @@ const ScoreDisplay = ({
                 results.forEach((r, i) => {
 
                     note = indexTransform ? notes[indexTransform[i]] : notes[i]
+                    if(!note) return
 
                     switch(gradedFeature){
                         case "overview":
