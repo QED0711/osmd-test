@@ -1,0 +1,940 @@
+[
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": false,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "C4",
+        "assessment": {
+            "pitch": false,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "E2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "F#4/Gb4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "F#4/Gb4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "C4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "E2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "F#2/Gb2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "G2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "C4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "E2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": false
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "F#4/Gb4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "F#4/Gb4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "C4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "E4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "C3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "A2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G2",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "B2",
+        "assessment": {
+            "pitch": false,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G3",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "D4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    },
+    {
+        "note": "G4",
+        "assessment": {
+            "pitch": true,
+            "rhythm": true
+        }
+    }
+]
