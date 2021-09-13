@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bfabde6cb7fe7b1c50568624a8cb9e97",
+    "revision": "f69ae2bb598c8cec1ec8c30f6b35b0c9",
     "url": "/osmd-test/index.html"
   },
   {
-    "revision": "c7f2a73ef3092cc99a8f",
+    "revision": "f425e5615977e730dec7",
     "url": "/osmd-test/static/css/main.606632c3.chunk.css"
   },
   {
-    "revision": "199be8b0b9438bfdc730",
-    "url": "/osmd-test/static/js/2.9544d942.chunk.js"
+    "revision": "a50802a5b0746b0d9cb1",
+    "url": "/osmd-test/static/js/2.0016b6b6.chunk.js"
   },
   {
     "revision": "e12c96767c35f7f78d5052ffe2d2cb7f",
-    "url": "/osmd-test/static/js/2.9544d942.chunk.js.LICENSE.txt"
+    "url": "/osmd-test/static/js/2.0016b6b6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c7f2a73ef3092cc99a8f",
-    "url": "/osmd-test/static/js/main.fe68405c.chunk.js"
+    "revision": "f425e5615977e730dec7",
+    "url": "/osmd-test/static/js/main.87edfdd2.chunk.js"
   },
   {
     "revision": "02b2270925a249851f3f",
