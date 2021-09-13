@@ -13,6 +13,7 @@ import { processXML } from './processXML';
 import ControlPanel from './components/ControlPanel';
 import ScoreDisplay from './components/ScoreDisplay';
 import AssessmentPanel from './components/AssessmentPanel';
+import UngradedDisplay from './components/UngradedDisplay';
 
 const opensheetmusicdisplay = require("opensheetmusicdisplay")
 
@@ -56,6 +57,9 @@ function App() {
                         setAssessmentPercentages
                     }} />
                 </div>
+                </Route>
+                <Route exact path={"/scores/:songTitle/"}>
+                    <UngradedDisplay />
                 </Route>
             </Switch>
         </BrowserRouter>
