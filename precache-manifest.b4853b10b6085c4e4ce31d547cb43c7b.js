@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f69ae2bb598c8cec1ec8c30f6b35b0c9",
+    "revision": "c213571bef6328d1abe38d0c3ec83793",
     "url": "/osmd-test/index.html"
   },
   {
-    "revision": "f425e5615977e730dec7",
-    "url": "/osmd-test/static/css/main.606632c3.chunk.css"
+    "revision": "4177424d94e860a6dd7e",
+    "url": "/osmd-test/static/css/main.0a1fda04.chunk.css"
   },
   {
-    "revision": "a50802a5b0746b0d9cb1",
-    "url": "/osmd-test/static/js/2.0016b6b6.chunk.js"
+    "revision": "dfe0fb690571f591d3fc",
+    "url": "/osmd-test/static/js/2.1488b86e.chunk.js"
   },
   {
     "revision": "e12c96767c35f7f78d5052ffe2d2cb7f",
-    "url": "/osmd-test/static/js/2.0016b6b6.chunk.js.LICENSE.txt"
+    "url": "/osmd-test/static/js/2.1488b86e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f425e5615977e730dec7",
-    "url": "/osmd-test/static/js/main.87edfdd2.chunk.js"
+    "revision": "4177424d94e860a6dd7e",
+    "url": "/osmd-test/static/js/main.4fe45bc7.chunk.js"
   },
   {
     "revision": "02b2270925a249851f3f",
