@@ -13,7 +13,7 @@ import susSlashAudio from '../audio/sus_slash.wav'
 
 const SCORES = {
     "a_min": {
-        url: "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/a_minor9_noteflight.xml",
+        url: "https://raw.githubusercontent.com/QED0711/osmd-test/feature/demo_results/src/scores/a_minor9_noteflight.xml",
         results: aMinResults,
         audio: aMinAudio
     },
@@ -122,7 +122,7 @@ const ControlPanel = ({
                 &&
                 <div className="sample-audio">
                     {/* <h2>Sample Audio</h2> */}
-                    <audio controls>
+                    <audio id="user-audio" controls >
                         <source src={selectedScore.audio} type="audio/wav" />
                     </audio>
                 </div>

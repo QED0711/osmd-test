@@ -36,7 +36,7 @@ const ScoreDisplay = ({
     useEffect(() => {
 
         if (xml && selectedScore) {
-            const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("sheetmusic")
+            const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("sheetmusic", { drawTitle: false })
 
             const parser = new DOMParser()
             const xmlDoc = parser.parseFromString(xml, "text/xml")
@@ -60,7 +60,7 @@ const ScoreDisplay = ({
 
     useEffect(() => {
 
-        if(svg && displayResults){
+        if (svg && displayResults) {
             svg.forEach(svgElement => {
                 const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
                 const results = selectedScore.results
@@ -73,23 +73,23 @@ const ScoreDisplay = ({
                         console.log(window.__matchedNotes)
                     })
                 })
-                
+
                 console.log(results.length)
-                
+
                 const overall = selectedScore.results.filter(r => r.assessment.pitch && r.assessment.rhythm).length / results.length
                 const pitch = selectedScore.results.filter(r => r.assessment.pitch).length / results.length
                 const rhythm = selectedScore.results.filter(r => r.assessment.rhythm).length / results.length
 
-                setAssessmentPercentages({overall, pitch, rhythm})
-                
+                setAssessmentPercentages({ overall, pitch, rhythm })
+
                 window.__matchedNotes = []
                 let note, cls, passed, choice;
                 results.forEach((r, i) => {
 
                     note = indexTransform ? notes[indexTransform[i]] : notes[i]
-                    if(!note) return
+                    if (!note) return
 
-                    switch(gradedFeature){
+                    switch (gradedFeature) {
                         case "overview":
                             passed = results[i]?.assessment?.pitch && results[i].assessment.rhythm
                             break;
@@ -113,14 +113,15 @@ const ScoreDisplay = ({
     }, [gradedFeature, svg, displayResults])
 
     return (
+        <>
+            <div className="container" style={{
+                width: "100vw",
+                margin: "0 auto"
+            }}>
+                <div id="sheetmusic" style={{ height: "auto", width: "100%", margin: "0 auto" }}></div>
 
-        <div className="container" style={{
-            width: "95vw",
-            margin: "0 auto"
-        }}>
-            <div id="sheetmusic" style={{ height: "auto", width: "95%", margin: "0 auto" }}></div>
-
-        </div>
+            </div>
+        </>
     )
 }
 

@@ -6,9 +6,11 @@ body{
   height: calc(100vh - 1rem);
   padding: 0 0 0;
 
-  text-align: center;
-  background: linear-gradient(135deg, #141414, #00afe4);
+  text-align: left;
+  /* background: linear-gradient(135deg, #141414, #00afe4); */
   color: whitesmoke;
+
+  background: transparent;
   
 }
 
@@ -48,13 +50,13 @@ body{
 
 #sheetmusic{
   height: auto;
-  width: 95vw;
+  width: 100vw;
 
   margin: 0 auto;
 
-  background-color: whitesmoke;
+  background: transparent;
 
-  box-shadow: 2px 2px 10px grey;
+  /* box-shadow: 2px 2px 10px grey; */
 }
 
 
@@ -77,6 +79,7 @@ body{
 
 
 .sample-audio{
+  display: none;
   width: 95vw;
   margin: 1rem auto 0;
   padding: 1rem;
@@ -98,6 +101,27 @@ body{
 
 audio::-webkit-media-controls-panel{
   background: transparent;
+}
+
+.audio-toggle{
+  width: 6rem;
+  margin: 1rem;
+  padding: 0.25rem 0;
+  
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  border: 2px solid grey;
+  box-sizing: border-box;
+}
+
+.audio-toggle:hover{
+  font-style: italic;
+  font-weight: bold;
+  opacity: 1;
+  border: 2px solid black;
+
 }
 
 
