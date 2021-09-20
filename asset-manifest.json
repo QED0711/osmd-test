@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/osmd-test/static/css/main.0a1fda04.chunk.css",
-    "main.js": "/osmd-test/static/js/main.4fe45bc7.chunk.js",
-    "main.js.map": "/osmd-test/static/js/main.4fe45bc7.chunk.js.map",
+    "main.css": "/osmd-test/static/css/main.5680d8c9.chunk.css",
+    "main.js": "/osmd-test/static/js/main.dda1e3b4.chunk.js",
+    "main.js.map": "/osmd-test/static/js/main.dda1e3b4.chunk.js.map",
     "runtime-main.js": "/osmd-test/static/js/runtime-main.122b3c8e.js",
     "runtime-main.js.map": "/osmd-test/static/js/runtime-main.122b3c8e.js.map",
-    "static/js/2.1488b86e.chunk.js": "/osmd-test/static/js/2.1488b86e.chunk.js",
-    "static/js/2.1488b86e.chunk.js.map": "/osmd-test/static/js/2.1488b86e.chunk.js.map",
+    "static/js/2.fa2d34d3.chunk.js": "/osmd-test/static/js/2.fa2d34d3.chunk.js",
+    "static/js/2.fa2d34d3.chunk.js.map": "/osmd-test/static/js/2.fa2d34d3.chunk.js.map",
     "index.html": "/osmd-test/index.html",
-    "precache-manifest.b4853b10b6085c4e4ce31d547cb43c7b.js": "/osmd-test/precache-manifest.b4853b10b6085c4e4ce31d547cb43c7b.js",
+    "precache-manifest.4abb5d0cbb1e08d6d3508b40ae7e36c4.js": "/osmd-test/precache-manifest.4abb5d0cbb1e08d6d3508b40ae7e36c4.js",
     "service-worker.js": "/osmd-test/service-worker.js",
-    "static/css/main.0a1fda04.chunk.css.map": "/osmd-test/static/css/main.0a1fda04.chunk.css.map",
-    "static/js/2.1488b86e.chunk.js.LICENSE.txt": "/osmd-test/static/js/2.1488b86e.chunk.js.LICENSE.txt",
+    "static/css/main.5680d8c9.chunk.css.map": "/osmd-test/static/css/main.5680d8c9.chunk.css.map",
+    "static/js/2.fa2d34d3.chunk.js.LICENSE.txt": "/osmd-test/static/js/2.fa2d34d3.chunk.js.LICENSE.txt",
     "static/media/12_bar_blues_audio.wav": "/osmd-test/static/media/12_bar_blues_audio.9d6e1358.wav",
+    "static/media/12_bb_example.wav": "/osmd-test/static/media/12_bb_example.1f3aea94.wav",
     "static/media/A_min9.wav": "/osmd-test/static/media/A_min9.cf9b03d2.wav",
     "static/media/C_major.wav": "/osmd-test/static/media/C_major.970b368f.wav",
-    "static/media/sus_slash.wav": "/osmd-test/static/media/sus_slash.b309ad2a.wav"
+    "static/media/c_maj_example.wav": "/osmd-test/static/media/c_maj_example.22f2bb9e.wav",
+    "static/media/sus_slash.wav": "/osmd-test/static/media/sus_slash.b309ad2a.wav",
+    "static/media/sus_slash_example.wav": "/osmd-test/static/media/sus_slash_example.514b49db.wav"
   },
   "entrypoints": [
     "static/js/runtime-main.122b3c8e.js",
-    "static/js/2.1488b86e.chunk.js",
-    "static/css/main.0a1fda04.chunk.css",
-    "static/js/main.4fe45bc7.chunk.js"
+    "static/js/2.fa2d34d3.chunk.js",
+    "static/css/main.5680d8c9.chunk.css",
+    "static/js/main.dda1e3b4.chunk.js"
   ]
 }
