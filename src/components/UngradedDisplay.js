@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router';
 
+import aMin9ExampleAudio from '../audio/a_min9_example.wav'
 import cMajExampleAudio from '../audio/c_maj_example.wav'
 import twelveBbExampleAudio from '../audio/12_bb_example.wav'
 import susSlashExampleAudio from '../audio/sus_slash_example.wav'
@@ -11,7 +12,7 @@ const opensheetmusicdisplay = require("opensheetmusicdisplay")
 const SCORES = {
     "a_min": {
         url: "https://raw.githubusercontent.com/QED0711/osmd-test/main/src/scores/a_minor9_noteflight.xml",
-        exampleAudio: null
+        exampleAudio: aMin9ExampleAudio
     },
     "c_maj": {
         url: "https://raw.githubusercontent.com/QED0711/osmd-test/feature/demo_results/src/scores/c_maj_noteflight.xml",
