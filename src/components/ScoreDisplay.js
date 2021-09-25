@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fillNoteColor } from '../js/displayHelpers';
+import useWindowResize from '../js/useWindowResize';
 
 const opensheetmusicdisplay = require("opensheetmusicdisplay")
 
@@ -12,7 +13,8 @@ const ScoreDisplay = ({
 
     const [xml, setXml] = useState(null)
     const [svg, setSvg] = useState(null)
-
+    const size = useWindowResize({scroll: false})
+    console.log({size, svg})
 
     // ON LOAD
     useEffect(() => {
@@ -61,11 +63,15 @@ const ScoreDisplay = ({
     useEffect(() => {
 
         if (svg && displayResults) {
+            
             svg.forEach(svgElement => {
+                if(!svgElement.childElementCount) {
+                    svgElement = document.querySelector("svg")
+                }
                 const notes = svgElement.querySelectorAll(".vf-tabnote, .vf-notehead");
                 const results = selectedScore.results
                 const indexTransform = selectedScore.indexTransform
-
+            
                 window.__matchedNotes = []
                 notes.forEach((note, i) => {
                     note.addEventListener("click", () => {
@@ -110,7 +116,16 @@ const ScoreDisplay = ({
             })
         }
 
-    }, [gradedFeature, svg, displayResults])
+    }, [gradedFeature, svg, displayResults, size])
+
+    // useEffect(() => {
+    //     const delaySvgQuery = async () => {
+    //         await new Promise(resolve => setTimeout(resolve, 50))
+    //         setSvg(document.querySelectorAll("svg"))
+    //     }
+
+    //     delaySvgQuery()
+    // }, [size])
 
     return (
         <>
