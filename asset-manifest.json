@@ -1,30 +1,29 @@
 {
   "files": {
     "main.css": "/osmd-test/static/css/main.5680d8c9.chunk.css",
-    "main.js": "/osmd-test/static/js/main.cab68e76.chunk.js",
-    "main.js.map": "/osmd-test/static/js/main.cab68e76.chunk.js.map",
+    "main.js": "/osmd-test/static/js/main.2350ba1b.chunk.js",
+    "main.js.map": "/osmd-test/static/js/main.2350ba1b.chunk.js.map",
     "runtime-main.js": "/osmd-test/static/js/runtime-main.122b3c8e.js",
     "runtime-main.js.map": "/osmd-test/static/js/runtime-main.122b3c8e.js.map",
-    "static/js/2.3004631c.chunk.js": "/osmd-test/static/js/2.3004631c.chunk.js",
-    "static/js/2.3004631c.chunk.js.map": "/osmd-test/static/js/2.3004631c.chunk.js.map",
+    "static/js/2.8803c6ed.chunk.js": "/osmd-test/static/js/2.8803c6ed.chunk.js",
+    "static/js/2.8803c6ed.chunk.js.map": "/osmd-test/static/js/2.8803c6ed.chunk.js.map",
     "index.html": "/osmd-test/index.html",
-    "precache-manifest.a665146d6a77af196092efe79f164291.js": "/osmd-test/precache-manifest.a665146d6a77af196092efe79f164291.js",
+    "precache-manifest.9a1310b83eb48698e135cea44adca18b.js": "/osmd-test/precache-manifest.9a1310b83eb48698e135cea44adca18b.js",
     "service-worker.js": "/osmd-test/service-worker.js",
     "static/css/main.5680d8c9.chunk.css.map": "/osmd-test/static/css/main.5680d8c9.chunk.css.map",
-    "static/js/2.3004631c.chunk.js.LICENSE.txt": "/osmd-test/static/js/2.3004631c.chunk.js.LICENSE.txt",
+    "static/js/2.8803c6ed.chunk.js.LICENSE.txt": "/osmd-test/static/js/2.8803c6ed.chunk.js.LICENSE.txt",
     "static/media/12_bar_blues_audio.wav": "/osmd-test/static/media/12_bar_blues_audio.9d6e1358.wav",
     "static/media/12_bb_example.wav": "/osmd-test/static/media/12_bb_example.1f3aea94.wav",
     "static/media/A_min9.wav": "/osmd-test/static/media/A_min9.cf9b03d2.wav",
     "static/media/C_major.wav": "/osmd-test/static/media/C_major.970b368f.wav",
-    "static/media/a_min9_example.wav": "/osmd-test/static/media/a_min9_example.47586396.wav",
-    "static/media/c_maj_example.wav": "/osmd-test/static/media/c_maj_example.22f2bb9e.wav",
+    "static/media/c_maj_example.wav": "/osmd-test/static/media/c_maj_example.94c5a26d.wav",
     "static/media/sus_slash.wav": "/osmd-test/static/media/sus_slash.b309ad2a.wav",
     "static/media/sus_slash_example.wav": "/osmd-test/static/media/sus_slash_example.514b49db.wav"
   },
   "entrypoints": [
     "static/js/runtime-main.122b3c8e.js",
-    "static/js/2.3004631c.chunk.js",
+    "static/js/2.8803c6ed.chunk.js",
     "static/css/main.5680d8c9.chunk.css",
-    "static/js/main.cab68e76.chunk.js"
+    "static/js/main.2350ba1b.chunk.js"
   ]
 }
